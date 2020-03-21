@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const username = document.getElementById('uername');
+const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
@@ -42,9 +42,15 @@ function checkRequired(inputArr) {
 // check input length
 function checkLength(input, min, max) {
   if(input.value.length < min) {
-    showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    showError(
+      input, 
+      `${getFieldName(input)} must be at least ${min} characters`
+    );
   } else if(input.value.length > max) {
-    showError(input, `${getFieldName(input)} must be less than ${max} characters`);
+    showError(
+      input, 
+      `${getFieldName(input)} must be less than ${max} characters`
+    );
   } else {
     showSuccess(input);
   }
